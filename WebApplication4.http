@@ -1,0 +1,32 @@
+@WebApplication4_HostAddress = http://localhost:5291
+
+### 1. Get All Users
+GET {{WebApplication4_HostAddress}}/api/user
+Accept: application/json
+
+### 2. Get User By Id
+GET {{WebApplication4_HostAddress}}/api/user/1
+Accept: application/json
+
+### 3. Create a New User (Only Name, Age, Number)
+POST {{WebApplication4_HostAddress}}/api/user
+Content-Type: application/json
+
+{
+  "name": "Amit Sharma",
+  "age": 28,
+  "number": "9876501234"
+}
+
+### 4. Update an Existing User
+PUT {{WebApplication4_HostAddress}}/api/user/1
+Content-Type: application/json
+
+{
+  "name": "Salman Khan",
+  "age": 26,
+  "number": "9998887776"
+}
+
+### 5. Delete a User
+DELETE {{WebApplication4_HostAddress}}/api/user/2
